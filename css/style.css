@@ -2,5 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
+.navbar{
+    position: sticky;
+    padding: 20px;
+    background-color: bisque;
+}
+
+.navData{
+    color: white;
+    text-decoration: none;
+}
+.navData:hover{
+    cursor: pointer;
+    color: black;
+}
