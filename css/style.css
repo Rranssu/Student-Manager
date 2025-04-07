@@ -8,6 +8,11 @@
 
 }
 
+.Landing_image{
+    width: 600px;
+    height: 750px;
+}
+
 .h_text {
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
