@@ -9,28 +9,29 @@
 }
 
 .Landing_image{
-    margin: auto;
-    width: 600px;
-    height: 750px;
+    position: relative;
+    width: 1500px;
+    height: 1200px;
 }
 
-.h_text {
+.navbar{
+    background-color: rgb(109, 24, 24);
+}
+
+.navbar .h_text {
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.1rem;
 
 }
 
-.navbar{
+.navbar .main_Name{
     justify-content: space-between;
     padding: 10px;
     display: flex;
     position: sticky;
     padding: 20px;
     background-color: rgb(109, 24, 24);
-    justify-content: space-between;
-    padding: 10px;
-    display: flex;
 }
 
 .main_Name {
