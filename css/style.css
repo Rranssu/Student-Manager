@@ -11,9 +11,21 @@
 .h_text {
     padding: 5px;
     background-color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+
+}
+
+.h_text {
+    padding: 5px;
+    background-color: red;
 }
 
 .navbar{
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: solid 1px red;
+    display: flex;
     position: sticky;
     padding: 20px;
     background-color: bisque;
@@ -50,6 +62,12 @@ main {
     margin: 20px;
 }
 
+.main_Name {
+    color: white;
+    padding: 5px;
+    background-color: red;
+}
+
 .navData{
     color: white;
     text-decoration: none;
@@ -57,4 +75,25 @@ main {
 .navData:hover{
     cursor: pointer;
     color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    display: flex;
+    background-color: red;
+}
+
+.footer_text {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+main {
+    display: flex;
+    margin: 20px;
 }
