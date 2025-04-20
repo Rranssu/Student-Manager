@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light gray background for the body */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +8,8 @@ body {
     margin: 0;
 }
 
-.signup-container {
-    background-color: white;
+.login-container, .signup-container {
+    background-color: white; /* White background for the containers */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -19,6 +19,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #d9534f; /* Red color for the heading */
 }
 
 .form-group {
@@ -28,6 +29,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
+    color: #d9534f; /* Red color for labels */
 }
 
 input[type="text"],
@@ -35,22 +37,22 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #d9534f; /* Red border for input fields */
     border-radius: 4px;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: #d9534f; /* Red background for buttons */
+    color: white; /* White text for buttons */
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #c9302c; /* Darker red on hover */
 }
 
 p {
@@ -58,7 +60,7 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: #d9534f; /* Red color for links */
     text-decoration: none;
 }
 
