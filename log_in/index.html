@@ -83,8 +83,8 @@
 
         if (username === "admin" && password === "12345678") {
           window.location.href = "../pages/admin/index.html";
-        } else {
-          alert("Invalid username or password!");
+        } else if(username === "swifty" && password === "Password") {
+            window.location.href = "../pages/userview/home/index.html";
         }
       });
     });

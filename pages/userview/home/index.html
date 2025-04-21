@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mana - Home</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+    <style>
+        body {
+          display: flex;
+          min-height: 100vh;
+          background-color: #f8f9fa;
+        }
+    
+        .sidebar {
+          width: 250px;
+          background-color: rgb(126, 43, 43);
+          color: white;
+          padding: 1rem;
+          position: fixed;
+          height: 100vh;
+        }
+    
+        .sidebar .nav-link {
+          color: white;
+          margin: 0.5rem 0;
+        }
+    
+        .sidebar .nav-link.active,
+        .sidebar .nav-link:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 0.375rem;
+        }
+    
+        .main-content {
+          margin-left: 250px;
+          padding: 2rem;
+          flex: 1;
+        }
+    
+        .profile-pic {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+    
+        .welcome-text {
+          margin-top: 20px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: center;
+        }
+    
+        .card {
+          border-radius: 1rem;
+        }
+      </style>
+  </head>
+  
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="sidebar d-flex flex-column">
+        <h3 class="mb-4">Student Mana</h3>
+        <a href="#" class="nav-link active">Dashboard</a>
+        <a href="#" class="nav-link">My Classes</a>
+        <a href="#" class="nav-link">Subjects</a>
+        <a href="#" class="nav-link">Students</a>
+        <a href="#" class="nav-link">Settings</a>
+        <a href="../../../log_in/index.html" class="nav-link mt-auto text-danger">Logout</a>
+      </nav>
+  
+  <main class="main-content">
+    <div class="text-center">
+      <img src="pfp.webp" alt="Profile Picture" class="profile-pic"/>
+      <div class="welcome-text">
+        <h1>Welcome Back, Teacher!</h1>
+      </div>
+    </div>
+  
+    <main class="container py-5">
+      <div class="row mb-4 text-center">
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4">
+            <h5>Total Classes</h5>
+            <h2>5</h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4">
+            <h5>Subjects</h5>
+            <h2>8</h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm p-4">
+            <h5>Enrolled Students</h5>
+            <h2>143</h2>
+          </div>
+        </div>
+      </div>
+
+    <div class="card shadow-sm p-4">
+        <h4 class="fw-bold">Students with Missing Scores</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Kevin Librero</span> <span class="badge bg-danger">Missing Score</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Ali Hassan Sali</span> <span class="badge bg-danger">Missing Score</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Renz Davin Espiritu</span> <span class="badge bg-danger">Missing Score</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Razel Jerodias</span> <span class="badge bg-danger">Missing Score</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Moe Lester</span> <span class="badge bg-danger">Missing Score</span>
+          </li>
+        </ul>
+      </div>
+    </main>
+  
+    <script src="src/bootstrap.min.js"></script>
+    <script src="src/jquery-3.7.1.min.js"></script>
+  </body>
+  </html>
+    </main>
+  
+    <script src="src/bootstrap.min.js"></script>
+    <script src="src/jquery-3.7.1.min.js"></script>
+  </body>
+  </html>
