@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Mana - Instructors</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css"/>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: rgb(126, 43, 43);
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+      margin: 0.5rem 0;
+    }
+
+    .sidebar .nav-link.active,
+    .sidebar .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.375rem;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .profile-card {
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .school-badge {
+      background-color: rgb(126, 43, 43);
+      color: white;
+      border-radius: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="sidebar d-flex flex-column">
+    <h3 class="mb-4">Student Mana</h3>
+    <a href="../" class="nav-link">Dashboard</a>
+    <a href="#" class="nav-link active">Instructors</a>
+    <a href="../classes/" class="nav-link">Classes</a>
+    <a href="../reports/" class="nav-link">Reports</a>
+    <a href="../../../log_in/" class="nav-link mt-auto text-danger">Logout</a>
+  </nav>
+
+  <main class="main-content">
+    <h2 class="mb-4 text-center">Instructors</h2>
+    <div class="row g-4">
+      <!-- Swifty -->
+      <div class="col-md-4">
+        <div class="profile-card">
+          <img src="../../../pics/pfp.webp" alt="Swifty" class="profile-pic"/>
+          <h4>Swifty</h4>
+          <!--
+          A litle easter egg for you sir Rham hehehehehe  
+          -Lance
+          -->
+          <!--<span class="school-badge"><a href="https://leagueoflegends.fandom.com/wiki/Summoner's_Rift" class="link-light">Summoners High School</a></span>-->
+          <span class="school-badge">Summoners High School</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="profile-card">
+          <img src="../../../pics/pfp2.webp" alt="Ransu" class="profile-pic"/>
+          <h4>Ransu</h4>
+          <span class="school-badge">Ascent Academy</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="profile-card">
+          <img src="../../../pics/pfp3.webp" alt="Ryuku" class="profile-pic"/>
+          <h4>Ryuku</h4>
+          <span class="school-badge">Twisted Academy</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../src/jquery-3.7.1.min.js"></script>
+  <script src="../../src/bootstrap.min.js"></script>
+</body>
+</html>

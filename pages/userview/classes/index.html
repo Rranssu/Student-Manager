@@ -1,11 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DO lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Mana - Classes</title>
-</head>
-<body>
-    
-</body>
-</html>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+      }
+
+      .mainRed {
+            background-color: rgb(126, 43, 43);
+        }
+  
+      .sidebar {
+        width: 250px;
+        background-color: rgb(126, 43, 43);
+        color: white;
+        padding: 1rem;
+        position: fixed;
+        height: 100vh;
+      }
+  
+      .sidebar .nav-link {
+        color: white;
+        margin: 0.5rem 0;
+      }
+  
+      .sidebar .nav-link.active,
+      .sidebar .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 0.375rem;
+      }
+  
+      .main-content {
+        margin-left: 250px;
+        padding: 2rem;
+        flex: 1;
+      }
+  
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+  
+      .welcome-text {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .card {
+        border-radius: 1rem;
+      }
+    </style>
+  </head>
+  
+  <body class="bg-light">
+    <nav class="sidebar d-flex flex-column">
+      <h3 class="mb-4">Student Mana</h3>
+      <a href="../home/" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link active">My Classes</a>
+      <a href="../subjects/" class="nav-link">Subjects</a>
+      <a href="#" class="nav-link">Students</a>
+      <a href="#" class="nav-link">Settings</a>
+      <a href="../../../log_in/" class="nav-link mt-auto text-danger">Logout</a>
+    </nav>
+  
+    <main class="main-content">
+          <h1>Your Classes</h1>
+        </div>
+      </div>
+  
+      <div class="card shadow-sm p-4 mt-5">
+        <h4 class="fw-bold">Handled Sections</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Grade 10 - Platinum</li>
+          <li class="list-group-item">Grade 10 - Gold</li>
+          <li class="list-group-item">Grade 9 - Iron</li>
+          <li class="list-group-item">Grade 8 - Silver</li>
+          <li class="list-group-item">Grade 7 - Bronze</li>
+        </ul>
+      </div>
+  
+      
+      <div class="card shadow-sm p-4 mt-4">
+        <h4 class="fw-bold mb-3">Teaching Schedule</h4>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Section</th>
+                <th>Subject</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>8:00 AM - 9:00 AM</td>
+                <td>Grade 10 - Platinum</td>
+                <td>English</td>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td>9:30 AM - 10:30 AM</td>
+                <td>Grade 9 - Iron</td>
+                <td>English</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>8:00 AM - 9:00 AM</td>
+                <td>Grade 10 - Gold</td>
+                <td>English</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>10:00 AM - 11:00 AM</td>
+                <td>Grade 8 - Silver</td>
+                <td>Math</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>1:00 PM - 2:00 PM</td>
+                <td>Grade 7 - Bronze</td>
+                <td>Science</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  
+    <script src="../../../src/bootstrap.min.js"></script>
+    <script src="../../../src/jquery-3.7.1.min.js"></script>
+  </bod>

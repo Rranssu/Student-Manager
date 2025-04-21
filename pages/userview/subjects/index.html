@@ -1,0 +1,139 @@
+<!DO lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Mana - Subjects</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: rgb(126, 43, 43);
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+      margin: 0.5rem 0;
+    }
+
+    .sidebar .nav-link.active,
+    .sidebar .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.375rem;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .card {
+      border-radius: 1rem;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <nav class="sidebar d-flex flex-column">
+    <h3 class="mb-4">Student Mana</h3>
+    <a href="../home/" class="nav-link">Dashboard</a>
+    <a href="../classes/" class="nav-link">My Classes</a>
+    <a href="#" class="nav-link active">Subjects</a>
+    <a href="#" class="nav-link">Students</a>
+    <a href="#" class="nav-link">Settings</a>
+    <a href="../../../log_in/" class="nav-link mt-auto text-danger">Logout</a>
+  </nav>
+
+  <main class="main-content">
+    <h1 class="mb-4">Subjects</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4">
+          <h5>English</h5>
+          <p>Current Topic: Figures of Speech</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4">
+          <h5>Math</h5>
+          <p>Algebraic Expresion</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 mb-4">
+          <h5>Science</h5>
+          <p>Natural Disasters</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm p-4">
+      <h4 class="fw-bold mb-3">Student Progress per Subject</h4>
+      <canvas id="progressChart"></canvas>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        const progressChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [
+                    {
+                        label: 'English',
+                        data: [85, 90, 87, 88, 92, 93],
+                        borderColor: 'rgb(126, 43, 43)',
+                        backgroundColor: 'rgba(126, 43, 43, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Math',
+                        data: [78, 80, 82, 84, 85, 88],
+                        borderColor: 'rgb(0, 123, 255)',
+                        backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Science',
+                        data: [80, 85, 83, 86, 90, 92],
+                        borderColor: 'rgb(40, 167, 69)',
+                        backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+  
+  </script>
+</bo>
