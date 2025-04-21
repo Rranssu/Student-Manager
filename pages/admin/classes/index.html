@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Mana - Admin Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Mana - Classes</title>
   <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
   <style>
     body {
@@ -41,22 +41,20 @@
 
     .card {
       border-radius: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .chart-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+    .class-title {
+      font-weight: bold;
+      color: rgb(126, 43, 43);
+    }
 
-.chart-container canvas {
-  width: 100% !important;
-  height: 400px !important;
-}
-
-
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: rgb(126, 43, 43);
+      border-bottom: 2px solid rgb(126, 43, 43);
+      padding-bottom: 0.5rem;
+    }
   </style>
 </head>
 
@@ -64,14 +62,103 @@
 
   <nav class="sidebar d-flex flex-column">
     <h3 class="mb-4">Student Mana</h3>
-    <a href="../index.html" class="nav-link">Dashboard</a>
-    <a href="../instructor/index.html" class="nav-link">Instructors</a>
+    <a href="../" class="nav-link">Dashboard</a>
+    <a href="../instructor/" class="nav-link">Instructors</a>
     <a href="#" class="nav-link active">Classes</a>
     <a href="../reports/" class="nav-link">Reports</a>
     <a href="../../../log_in/" class="nav-link mt-auto text-danger">Logout</a>
   </nav>
 
   <main class="main-content">
+    <h2 class="text-center mb-5">Instructor Classes</h2>
+
+
+    <h3 class="section-title">Swifty</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Math</h5>
+          <p><strong>Schedule:</strong> Mon & Wed - 10:00AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">English</h5>
+          <p><strong>Schedule:</strong> Mon & Fri - 3:00PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">English</h5>
+          <p><strong>Schedule:</strong> Tue & Thu - 9:00AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">English 101</h5>
+          <p><strong>Schedule:</strong> Thu - 3:00PM</p>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 class="section-title">Ransu</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">English Literature</h5>
+          <p><strong>Schedule:</strong> Tue & Thu - 1:00PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Creative Writing</h5>
+          <p><strong>Schedule:</strong> Tue & Thu - 4:00PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Environmental Science</h5>
+          <p><strong>Schedule:</strong> Tue - 10:00AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Biology Lab</h5>
+          <p><strong>Schedule:</strong> Mon & Wed - 2:00PM</p>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 class="section-title">Ryuku</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Introduction to Programming</h5>
+          <p><strong>Schedule:</strong> Wed & Fri - 11:00AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Economics 1</h5>
+          <p><strong>Schedule:</strong> Fri - 8:00AM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Art Appreciation</h5>
+          <p><strong>Schedule:</strong> Mon - 1:00PM</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="class-title">Computer Networks</h5>
+          <p><strong>Schedule:</strong> Wed & Fri - 9:00AM</p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <script src="../../src/jquery-3.7.1.min.js"></script>
