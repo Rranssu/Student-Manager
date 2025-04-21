@@ -4,41 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Manager</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <title>Student Mana - One Stop Solution For Teachers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<style>
+    .mainRed {
+        background-color: rgb(126, 43, 43);
+    }
+
+    .hero {
+      position: relative;
+      background-image: url("maxresdefault.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 25%;
+      transform: translateY(-50%);
+    }
+</style>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">STUDENT MANAGER</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">User</a></li>
-                <li><a href="#">Grades</a></li>
-                <li><a href="#">Data</a></li>
-                <li><a href="#admin">Contacts</a></li>
-            </ul>
-            <div class="search-bar">
-                <input type="search" name="" id="" placeholder="Search">
+        <nav class="navbar navbar-expand-lg navbar-dark mainRed">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">Student Mana</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sign_up/index.html" class="nav-link">Register</a>
+                        </li>
+                    </ul>
+
+                    
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-        <div>
-        <img class="background-image" src="maxresdefault.jpg">
+
+    <section class="hero d-flex align-items-center">
+        <div class="container hero-content">
+          <h1 class="display-4 fw-bold">A Step Closer To Ease!</h1>
+          <p class="lead">Manage Students Like You Never Did Before.</p>
+          <a href="sign_up/index.html" class="btn mainRed btn-dark btn-lg mt-2">Get Started</a>
         </div>
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, sequi non tenetur consectetur quaerat corrupti odio voluptas 
-            fugit at. Itaque cumque veniam saepe. Ipsa architecto atque adipisci non mollitia cum.</h1>
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam neque, amet corporis commodi omnis enim vero hic quidem, 
-            ad aliquid ipsa, iste ipsum dolore fugiat? At, magni hic! Quas, itaque?</h1>
-    </main>
-    <footer class="footer">
-        <h1 class="footer_text" id="Contacts">Contacts</h1>
-        <p id="admin" class="footer_text">Admin</p>
-    </footer>
+      </section>
+
+      <main>
+        <section class="py-4 bg-light" id="pricing">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5">Pricing</h2>
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="card h-100 shadow">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Free Forever</h5>
+                      <h6 class="card-price display-6">$0<span class="fs-6">/mo</span></h6>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li class="text-center">
+                          Everything at Student Mana is free! Worry No More About Fees And Manage Like Never Before!
+                        </li>
+                      </ul>
+                      <a href="sign_up/index.html" class="btn btn-outline-light mainRed w-100">Choose Plan</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+
+          <section class="py-5 bg-light" id="services">
+            <div class="container text-center">
+              <h2 class="fw-bold mb-5">Services</h2>
+              <div class="row g-4">
+          
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Manager</h5>
+                      <p class="card-text text-muted">
+                        Easily manage students, subjects, and schedules all in one place with intuitive controls. Perfect For Every Teacher!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Accessibility</h5>
+                      <p class="card-text text-muted">
+                        Designed with accessibility in mind — usable by everyone, including those with disabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Support</h5>
+                      <p class="card-text text-muted">
+                        Friendly and fast support for all your needs, whether you're a student or an educator.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </section>
+      </main>
+    
 </body>
-<script src="src/script.js"></script>
+<script src="src/bootstrap.min.js"></script>
 
 </html>
