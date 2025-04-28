@@ -77,6 +77,17 @@
           <h2>Ryuku</h2>
         </div>
     </div>
+
+    <div class="align-items-end mb-4">
+        <button class="btn school-badge" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+          Add Student
+        </button>
+    </div>  
+
+    <div class="row g-4" id="student-list">
+
+    </div>
+    <br>
     <div class="text-center">
         <h3>Teacher's Students</h3>
         <table class="table table-hover">
@@ -143,8 +154,72 @@
             </tbody>
         </table>
     </div>
+    <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form id="addStudentForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addStudentModalLabel">Add New Student</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="studentFirstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="studentFirstName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="studentLastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="studentLastName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="schoolID" class="form-label">Student ID</label>
+                  <input type="text" class="form-control" id="schoolID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="studentGrade" class="form-label">Enter Grade</label>
+                    <input type="text" class="form-control" id="studentGrade" required>
+                  </div>
+              </div>
+              
+              <div class="modal-footer">
+                <button type="submit" class="btn school-badge">Add student</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        document.getElementById("addStudentForm").addEventListener("submit", function(event) 
+        {
+        event.preventDefault();
 
-    <script src="src/bootstrap.min.js"></script>
+        const fname = document.getElementById("studentFirstName").value;
+        const lname = document.getElementById("studentLastName").value;
+        const studentId = document.getElementById("schoolID").value;
+        const grade = document.getElementById("studentGrade").value;
+
+        const tableBody = document.querySelector("table tbody");
+
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td><a href="#" class="nav-link">${fname}</a></td>
+            <td><a href="#" class="nav-link">${lname}</a></td>
+            <td>${grade}</td>
+            <td><a href="#" class="nav-link">view more ></a></td>
+        `;
+
+        tableBody.appendChild(newRow);
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById('addStudentModal'));
+        modal.hide();
+
+        this.reset();
+        });
+      </script>
+    <script src="../../src/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/jquery-3.7.1.min.js"></script>
 </main>
 </body>
