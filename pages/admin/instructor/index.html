@@ -76,6 +76,15 @@
 
   <main class="main-content">
     <h2 class="mb-4 text-center">Instructors</h2>
+
+    <div class="align-items-end mb-4">
+      <button class="btn school-badge" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
+        Add Teacher
+      </button>
+    </div>
+  
+    <div class="row g-4" id="teacher-list">
+      
     <div class="row g-4">
       <!-- Swifty -->
       <div class="col-md-4">
@@ -109,7 +118,78 @@
     </div>
   </main>
 
+  <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="addTeacherForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addTeacherModalLabel">Add New Teacher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="teacherName" class="form-label">Teacher Name</label>
+              <input type="text" class="form-control" id="teacherName" required>
+            </div>
+            <div class="mb-3">
+              <label for="teacherID" class="form-label">Teacher ID</label>
+              <input type="text" class="form-control" id="teacherID" required>
+            </div>
+            <div class="mb-3">
+              <label for="schoolName" class="form-label">School Name</label>
+              <input type="text" class="form-control" id="schoolName" required>
+            </div>
+            <div class="mb-3">
+              <label for="teacherPic" class="form-label">Profile Picture URL</label>
+              <input type="url" class="form-control" id="teacherPic" placeholder = "Optional">
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="submit" class="btn school-badge">Add Teacher</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("addTeacherForm").addEventListener("submit", function(event) 
+    {
+    event.preventDefault();
+
+    const name = document.getElementById("teacherName").value;
+    const school = document.getElementById("schoolName").value;
+    const id = document.getElementById("teacherID").value;
+    const profPic = document.getElementById("teacherPic").value;
+
+    const teacherList = document.getElementById("teacher-list");
+
+    const newCard = document.createElement("div");
+    newCard.className = "col-md-4";
+
+    newCard.innerHTML = 
+    `
+    <div class="profile-card">
+      <img src="${profPic}" alt="${name}" class="profile-pic"/>
+      <h4>${name}</h4>
+      <h5>ID: ${id}</h5>
+      <span class="school-badge">${school}</span>
+    </div>
+    `;
+
+    teacherList.appendChild(newCard);
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('addTeacherModal'));
+    modal.hide();
+
+    this.reset();
+   });
+
+  </script>
   <script src="../../src/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../src/bootstrap.min.js"></script>
 </body>
 </html>
